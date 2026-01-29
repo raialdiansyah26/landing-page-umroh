@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  /* colors */
+  --color-primary: #1f7f6c;
+  --color-secondary: #ffc265;
+  --color-accent: #e0f9f8;
+  --color-heading: #4a4a4a;
+  --color-p: #454545;
+
+  /* Typography */
+  --font-heading: "Lora", sans-serif;
+  --font-body: "Nunito", sans-serif;
+
+  /* font size */
+  --font-size-heading: 54px;
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  .btn-primary {
+    @apply bg-secondary text-white font-body font-bold px-5 py-3 rounded-lg lg:px-14 lg:py-5 lg:text-xl;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
