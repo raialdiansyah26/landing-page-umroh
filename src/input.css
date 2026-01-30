@@ -42,3 +42,97 @@
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* ========================================
+           CUSTOM THEME CONFIGURATION untuk Tailwind v4.1
+           Menggunakan @theme directive
+           ======================================== */
+@theme {
+  /* ========================================
+               CUSTOM ANIMATIONS
+               - scroll-left: Bergerak dari kanan ke kiri
+               - scroll-right: Bergerak dari kiri ke kanan
+               ======================================== */
+  --animate-scroll-left: scroll-left 40s linear infinite;
+  --animate-scroll-left-mobile: scroll-left 25s linear infinite;
+  --animate-scroll-right: scroll-right 40s linear infinite;
+  --animate-scroll-right-mobile: scroll-right 25s linear infinite;
+  --animate-fade-in-up: fade-in-up 0.8s ease-out;
+  --animate-fade-in-up-delay: fade-in-up 0.8s ease-out 0.2s both;
+  --animate-fade-in-up-delay-2: fade-in-up 0.8s ease-out 0.4s both;
+}
+
+/* ========================================
+           KEYFRAMES DEFINITIONS
+           Definisi animasi menggunakan @keyframes
+           ======================================== */
+@keyframes scroll-left {
+  /* Scroll dari kanan ke kiri */
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  /* Scroll dari kiri ke kanan */
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-up {
+  /* Fade in dari bawah */
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+           UTILITY CLASSES untuk Animasi
+           ======================================== */
+.animate-scroll-left {
+  animation: var(--animate-scroll-left);
+}
+
+.animate-scroll-left-mobile {
+  animation: var(--animate-scroll-left-mobile);
+}
+
+.animate-scroll-right {
+  animation: var(--animate-scroll-right);
+}
+
+.animate-scroll-right-mobile {
+  animation: var(--animate-scroll-right-mobile);
+}
+
+.animate-fade-in-up {
+  animation: var(--animate-fade-in-up);
+}
+
+.animate-fade-in-up-delay {
+  animation: var(--animate-fade-in-up-delay);
+}
+
+.animate-fade-in-up-delay-2 {
+  animation: var(--animate-fade-in-up-delay-2);
+}
+
+/* ========================================
+           HOVER STATE untuk Pause Animation
+           Menggunakan syntax Tailwind v4.1
+           ======================================== */
+.hover-pause:hover {
+  animation-play-state: paused;
+}
