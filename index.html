@@ -21,6 +21,114 @@
     />
   </head>
   <body>
+    <!-- Navbar -->
+    <nav
+      class="bg-white shadow-lg fixed w-full py-5 top-0 z-50 font-body font-semibold"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <img src="assets/icons/Logo.svg" alt="" />
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-secondary font-medium transition"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-secondary font-medium transition"
+              >About Us</a
+            >
+            <a
+              href="#package"
+              class="text-gray-700 hover:text-secondary font-medium transition"
+              >Package</a
+            >
+            <a
+              href="#facilities"
+              class="text-gray-700 hover:text-secondary font-medium transition"
+              >Facilities</a
+            >
+            <a
+              href="#gallery"
+              class="text-gray-700 hover:text-secondary font-medium transition"
+              >Gallery</a
+            >
+          </div>
+          <button class="btn-primary hidden lg:block">Konsultasi Gratis</button>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobileMenuBtn"
+            class="md:hidden p-2 rounded-lg hover:bg-gray-100"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                id="menuIcon"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+              <path
+                id="closeIcon"
+                class="hidden"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden border-gray-200 font-semibold font-body"
+      >
+        <div class="px-4 pt-2 pb-4 space-y-2">
+          <a
+            href="#home"
+            class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-secondary rounded-lg transition"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-secondary rounded-lg transition"
+            >About Us</a
+          >
+          <a
+            href="#package"
+            class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-secondary rounded-lg transition"
+            >Package</a
+          >
+          <a
+            href="#facilities"
+            class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-secondary rounded-lg transition"
+            >Facilities</a
+          >
+          <a
+            href="#gallery"
+            class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-secondary rounded-lg transition"
+            >Gallery</a
+          >
+          <button class="btn-primary">Konsultasi Gratis</button>
+        </div>
+      </div>
+    </nav>
+
     <!--Hero start  -->
     <section id="home" class="pt-36 pb-32">
       <div class="container max-w-7xl mx-auto">
